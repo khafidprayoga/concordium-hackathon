@@ -29,7 +29,7 @@ Output:
 info: downloading component 'rust-std' for 'wasm32-unknown-unknown'
 info: installing component 'rust-std' for 'wasm32-unknown-unknown'
  18.9 MiB /  18.9 MiB (100 %)  10.5 MiB/s in  1s ETA:  0s
-```
+```****
 
 ## Install Cargo-Concordium (Linux Distro)
 ```bash
@@ -46,10 +46,29 @@ sudo mv concordium-client /usr/local/bin
 concordium-client consensus status --grpc-port 10000 --grpc-ip node.testnet.concordium.com
 ```
 ## Install Web Wallet Extension
-## Create Test Net Account
-## Acquiring testnet CCD via the CCD faucet
-## Export the Account Form Webwallet to concordium-client
+[See instruction here](https://developer.concordium.software/en/mainnet/net/browser-wallet/setup-browser-wallet.html) and export the private-key
+## Export the Account From Webwallet to concordium-client
+Import exported account and input the private-key
+```bash
+concordium-client config account import 4L3WQLjdAhvjey3Kyc7Sdv7Smhe9asLYsksFbWSWFm5b4jX1SA.export --name testnet```
+```
+Output: 
+```
+Enter encryption password: 
+Loaded the following account from the testnet chain:
+- 4L3WQLjdAhvjey3Kyc7Sdv7Smhe9asLYsksFbWSWFm5b4jX1SA 'testnet'.
+All signing keys have been encrypted with the password used for this import.
+Note that accounts are not transferable between different chains, e.g., from testnet to mainnet or vice-versa.
 
+Adding account 4L3WQLjdAhvjey3Kyc7Sdv7Smhe9asLYsksFbWSWFm5b4jX1SA with name(s) 'testnet'.
+Creating directory '/home/khafid/.config/concordium/accounts/4L3WQLjdAhvjey3Kyc7Sdv7Smhe9asLYsksFbWSWFm5b4jX1SA'.
+Created key directory.
+Writing file '/home/khafid/.config/concordium/accounts/names.map'.
+Added name mapping: 'testnet' --> '4L3WQLjdAhvjey3Kyc7Sdv7Smhe9asLYsksFbWSWFm5b4jX1SA'.
+Warning: Importing account without a secret encryption key provided. This account will not support encrypted transfers.
+The keys were successfully written to disk.
+
+```
 
 ## Footnote
 Read at: [Concordium Setup the development environment
