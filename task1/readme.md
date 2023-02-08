@@ -29,7 +29,7 @@ Output:
 info: downloading component 'rust-std' for 'wasm32-unknown-unknown'
 info: installing component 'rust-std' for 'wasm32-unknown-unknown'
  18.9 MiB /  18.9 MiB (100 %)  10.5 MiB/s in  1s ETA:  0s
-```****
+```
 
 ## Install Cargo-Concordium (Linux Distro)
 ```bash
@@ -38,6 +38,7 @@ chmod +x cargo-concordium
 mv cargo-concordium ~/.cargo/bin
 cargo concordium --help
 ```
+
 ## Install Concordium Client
 ```bash
 wget https://distribution.concordium.software/tools/linux/concordium-client_5.0.2-0 -O concordium-client
